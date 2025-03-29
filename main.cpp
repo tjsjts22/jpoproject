@@ -7,20 +7,20 @@
 #include <iostream>
 #include <wx/dc.h>
 #include <wx/bitmap.h>
-#include <numeric> // For std::accumulate
+#include <numeric> // For accumulate
 
 
 using namespace std;
 
 class GraphPanel : public wxPanel {
 public:
-    GraphPanel(wxWindow* parent, const std::vector<nlohmann::json>& data)
+    GraphPanel(wxWindow* parent, const vector<nlohmann::json>& data)
         : wxPanel(parent), sensorData(data) {
         Bind(wxEVT_PAINT, &GraphPanel::OnPaint, this);
     }
 
 private:
-    std::vector<nlohmann::json> sensorData;
+    vector<nlohmann::json> sensorData;
 
     void OnPaint(wxPaintEvent& event) {
         wxPaintDC dc(this);
@@ -54,25 +54,25 @@ private:
         dc.SetFont(wxFont(10, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
     
         // Extract sensor values and dates from the JSON data
-        std::vector<double> values;
-        std::vector<std::string> dates;
+        vector<double> values;
+        vector<string> dates;
         for (const auto& sensor : sensorData) {
             for (const auto& dataEntry : sensor["values"]) {
                 values.push_back(dataEntry["value"].get<double>());
-                dates.push_back(dataEntry["date"].get<std::string>());
+                dates.push_back(dataEntry["date"].get<string>());
             }
         }
         
         // Reverse order so the earliest date is on the left
-        std::reverse(values.begin(), values.end());
-        std::reverse(dates.begin(), dates.end());
+        reverse(values.begin(), values.end());
+        reverse(dates.begin(), dates.end());
         
         if (values.empty())
             return;
     
         // Determine min and max for scaling
-        double maxValue = *std::max_element(values.begin(), values.end());
-        double minValue = *std::min_element(values.begin(), values.end());
+        double maxValue = *max_element(values.begin(), values.end());
+        double minValue = *min_element(values.begin(), values.end());
         double yRange = maxValue - minValue;
         if (yRange == 0)
             yRange = 1; // Avoid division by zero
@@ -133,10 +133,10 @@ private:
         }
     
         // Determine indices for the minimum and maximum values
-        auto minIt = std::min_element(values.begin(), values.end());
-        auto maxIt = std::max_element(values.begin(), values.end());
-        int minIndex = std::distance(values.begin(), minIt);
-        int maxIndex = std::distance(values.begin(), maxIt);
+        auto minIt = min_element(values.begin(), values.end());
+        auto maxIt = max_element(values.begin(), values.end());
+        int minIndex = distance(values.begin(), minIt);
+        int maxIndex = distance(values.begin(), maxIt);
     
         // Highlight and label the minimum value point
         {
@@ -165,7 +165,7 @@ private:
         }
     
         // Calculate average
-        double sum = std::accumulate(values.begin(), values.end(), 0.0);
+        double sum = accumulate(values.begin(), values.end(), 0.0);
         double avg = (values.empty() ? 0 : sum / values.size());
 
         // Optionally, display the current (most recent) sensor value near the X-axis.
@@ -190,7 +190,7 @@ private:
         dc.DrawText(printTrend, leftMargin + 175, panelHeight - 20);
     }
     
-    string CalculateTrend(const std::vector<double>& values) {
+    string CalculateTrend(const vector<double>& values) {
         if (values.size() < 2) {
             return "Not enough data";
         }
@@ -509,45 +509,54 @@ private:
         }
 
         stationFile >> stationData;
-        int response = wxMessageBox("Do you wish to Download Sensor data?", "Update Database", wxYES_NO | wxICON_QUESTION, this);
+        if (auto it = std::find_if(stationData.begin(), stationData.end(), [](const auto& elem) {
+            return elem.contains("values");
+        }); it != stationData.end())
+        {
+            int response = wxMessageBox("Do you wish to Download Sensor data?", "Update Database", wxYES_NO | wxICON_QUESTION, this);
 
-        if (response == wxYES) {
-            fetchAndSaveSensorData(stationID, sensorID);
-             wxMessageBox("Data downloaded. Please reopen to view graph.", "Info", wxICON_INFORMATION);
-        } else {
-            cout << "User chose not to update the station database.\n";
-        
-        
-        stationFile.close();
-        
-        // Get sensor data for the selected sensorID
-        std::vector<nlohmann::json> sensorData;
+            if (response == wxYES) {
+                fetchAndSaveSensorData(stationID, sensorID);
+                wxMessageBox("Data downloaded. Please reopen to view graph.", "Info", wxICON_INFORMATION);
+            } else {
+                cout << "User chose not to update the station database.\n";
+            
+            
+            stationFile.close();
+            
+            // Get sensor data for the selected sensorID
+            vector<nlohmann::json> sensorData;
 
-        for (const auto& sensor : stationData) {
-            if (sensor["id"] == sensorID && sensor.contains("values")) {
-                sensorData.push_back(sensor);
+            for (const auto& sensor : stationData) {
+                if (sensor["id"] == sensorID && sensor.contains("values")) {
+                    sensorData.push_back(sensor);
+                }
             }
+            //why does it display empty graph after dowloading data
+            // Create the GraphPanel to display the graph
+            // In the ShowSensorData function, create a larger dialog and set explicit sizes for the graph panel
+            wxDialog* detailsDialog = new wxDialog(this, wxID_ANY, "Sensor Data Graph", wxDefaultPosition, wxSize(800, 600));
+            wxBoxSizer* vbox = new wxBoxSizer(wxVERTICAL);
+
+            GraphPanel* graphPanel = new GraphPanel(detailsDialog, sensorData);
+            graphPanel->SetMinSize(wxSize(1000, 750));  // Set larger graph size
+            graphPanel->SetSize(wxSize(1000, 750));
+            vbox->Add(graphPanel, 1, wxEXPAND | wxALL, 10);
+
+            wxButton* closeButton = new wxButton(detailsDialog, wxID_OK, "Close");
+            vbox->Add(closeButton, 0, wxALIGN_CENTER | wxALL, 10);
+
+            detailsDialog->SetSizerAndFit(vbox);
+            detailsDialog->Layout();
+
+            detailsDialog->ShowModal();
+            detailsDialog->Destroy();
+
         }
-        //why does it display empty graph after dowloading data
-        // Create the GraphPanel to display the graph
-        // In the ShowSensorData function, create a larger dialog and set explicit sizes for the graph panel
-        wxDialog* detailsDialog = new wxDialog(this, wxID_ANY, "Sensor Data Graph", wxDefaultPosition, wxSize(800, 600));
-        wxBoxSizer* vbox = new wxBoxSizer(wxVERTICAL);
-
-        GraphPanel* graphPanel = new GraphPanel(detailsDialog, sensorData);
-        graphPanel->SetMinSize(wxSize(1000, 750));  // Set larger graph size
-        graphPanel->SetSize(wxSize(1000, 750));
-        vbox->Add(graphPanel, 1, wxEXPAND | wxALL, 10);
-
-        wxButton* closeButton = new wxButton(detailsDialog, wxID_OK, "Close");
-        vbox->Add(closeButton, 0, wxALIGN_CENTER | wxALL, 10);
-
-        detailsDialog->SetSizerAndFit(vbox);
-        detailsDialog->Layout();
-
-        detailsDialog->ShowModal();
-        detailsDialog->Destroy();
-
+    }
+    else{
+        fetchAndSaveSensorData(stationID, sensorID);
+        wxMessageBox("Data downloaded. Please reopen to view graph."+ to_string(stationData.contains("value")), "Info", wxICON_INFORMATION);
     }
 }
     
