@@ -8,6 +8,9 @@
 #include <wx/dc.h>
 #include <wx/bitmap.h>
 #include <numeric> // For accumulate
+#include <wx/datectrl.h>
+#include <wx/datetime.h> //date ranges
+#include <thread>
 
 
 using namespace std;
@@ -24,7 +27,11 @@ private:
 
     void OnPaint(wxPaintEvent& event) {
         wxPaintDC dc(this);
-        DrawGraph(dc);
+        
+        thread t(&GraphPanel::DrawGraph, this, ref(dc));
+        t.join();
+        
+        //DrawGraph(dc);
     }
 
     // Updated DrawGraph function with grid lines
@@ -58,6 +65,9 @@ private:
         vector<string> dates;
         for (const auto& sensor : sensorData) {
             for (const auto& dataEntry : sensor["values"]) {
+                // Only include the data if "value" exists and is not null
+                if (!dataEntry.contains("value") || dataEntry["value"].is_null())
+                    continue;
                 values.push_back(dataEntry["value"].get<double>());
                 dates.push_back(dataEntry["date"].get<string>());
             }
@@ -218,10 +228,10 @@ private:
             return "Undefined trend";
         }
         double slope = (n * sumXY - sumX * sumY) / denominator;
-        
-        if (slope > 0) {
+        double slopdeg=0.1763;
+        if (slope > slopdeg) {
             return "Rising";
-        } else if (slope < 0) {
+        } else if (slope < -slopdeg) {
             return "Falling";
         } else {
             return "Stable";
@@ -271,13 +281,14 @@ void fetchAndSaveData(const string& url, const string& filename) {
 
 void init(wxWindow* parent) {
     // Opening file in C++ (GIVEN JSON)
+    int response;
     ifstream file("findAllmine.json");
     if (!file.is_open() || file.peek() == ifstream::traits_type::eof()) {
         file.close();
         fetchAndSaveData("https://api.gios.gov.pl/pjp-api/rest/station/findAll", "findAllmine.json");
     } else {
         // Show a wxMessageDialog for user prompt about data update
-        int response = wxMessageBox("Do you wish to download the database?", "Update Database", wxYES_NO | wxICON_QUESTION, parent);
+        response = wxMessageBox("Do you wish to download the database?", "Update Database", wxYES_NO | wxICON_QUESTION, parent);
 
         if (response == wxYES) {
             file.close();
@@ -289,7 +300,7 @@ void init(wxWindow* parent) {
 
     // Continue with the rest of the logic as before
     ifstream outFile("database.json");
-    if (!outFile.is_open() || outFile.peek() == ifstream::traits_type::eof()) {
+    if (response==wxYES) {
         outFile.close();
         file.open("findAllmine.json");
         file.clear();
@@ -306,11 +317,18 @@ void init(wxWindow* parent) {
                 string cityName = station["city"]["name"].get<string>();
                 int id = station["id"].get<int>();
                 string provinceName = station["city"]["commune"]["provinceName"].get<string>();
+                /* */
+                double georgeLat = stod(station["gegrLat"].get<string>());
+                double geogreLon = stod(station["gegrLon"].get<string>());
+
                 nlohmann::json newEntry;
 
                 newEntry["id"] = id;
                 newEntry["provinceName"] = provinceName;
                 newEntry["cityName"] = cityName;
+                /* */
+                newEntry["gegrLat"]= georgeLat;
+                newEntry["geogrLon"] = geogreLon;
                 jsonDatabase.push_back(newEntry);
             }
         }
@@ -485,12 +503,60 @@ private:
                 resultList->Append(cityName + " (" + to_string(CityId) + ")");
             }
         }
-    
+        //COORDINATE INPUT
         if (cityResults.empty()) {
             wxMessageBox("City not found in database.", "Search Result", wxICON_WARNING);
-        }
-    }
+            int response = wxMessageBox("Do you wish to search city through coordinates?", "Update Database", wxYES_NO | wxICON_QUESTION, this);
 
+            if (response == wxYES) {
+                wxString latStr = wxGetTextFromUser("Enter Latitude:", "Input Coordinates");
+                wxString lonStr = wxGetTextFromUser("Enter Longitude:", "Input Coordinates");
+                
+                double userLat, userLon;
+                if (!latStr.ToDouble(&userLat) || !lonStr.ToDouble(&userLon)) {
+                    wxMessageBox("Invalid coordinates input!", "Error", wxICON_ERROR);
+                    return;
+                }
+                
+                double minDistance = numeric_limits<double>::max();
+                nlohmann::json closestStation;
+                for (const auto& station : dataFromDatabase) {
+                    double stationLat = station["gegrLat"].get<double>();
+                    double stationLon = station["geogrLon"].get<double>();
+                    double distance = Haversine(userLat, userLon, stationLat, stationLon);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        closestStation = station;
+                    }
+                }
+                
+                cityResults.push_back(closestStation);
+            int stationID = closestStation["id"].get<int>();
+            wxString stationName = wxString::FromUTF8(closestStation["cityName"].get<string>());
+            wxString listItem;
+            listItem.Printf("%s (ID: %d) - closest %f", stationName, stationID, minDistance);
+            resultList->Append(listItem);
+    /*
+                wxString msg;
+                msg.Printf("Closest station:\nCity: %s\nProvince: %s\nID: %d\n",
+                    wxString::FromUTF8(closestStation["cityName"].get<string>()),
+                    wxString::FromUTF8(closestStation["provinceName"].get<string>()),
+                    closestStation["id"].get<int>(),
+                    minDistance);
+                wxMessageBox(msg, "Closest Station", wxICON_INFORMATION);
+                */
+            }
+            } else {
+                cout << "Naaaah we're going thorug name\n";
+            }
+           
+    }
+    double Haversine(double lat1, double lon1, double lat2, double lon2) {
+        double diff;
+        diff=lat1-lat2;
+        diff+=lon1-lon2;
+        return diff;
+    }
     void OnCitySelected(wxCommandEvent&) {
         int selection = resultList->GetSelection();
         if (selection != wxNOT_FOUND) {
@@ -507,12 +573,17 @@ private:
             wxMessageBox("Station data not found! Please fetch data first.", "Error", wxICON_ERROR);
             return;
         }
-
         stationFile >> stationData;
-        if (auto it = std::find_if(stationData.begin(), stationData.end(), [](const auto& elem) {
+        stationFile.close();
+    
+        // Gather sensor data for the selected sensorID.
+        vector<nlohmann::json> fullSensorData;
+        if (auto it = 
+            
+            find_if(stationData.begin(), stationData.end(), [](const auto& elem) {
             return elem.contains("values");
-        }); it != stationData.end())
-        {
+        }); it!= stationData.end()){
+            
             int response = wxMessageBox("Do you wish to Download Sensor data?", "Update Database", wxYES_NO | wxICON_QUESTION, this);
 
             if (response == wxYES) {
@@ -521,44 +592,104 @@ private:
             } else {
                 cout << "User chose not to update the station database.\n";
             
-            
-            stationFile.close();
-            
-            // Get sensor data for the selected sensorID
-            vector<nlohmann::json> sensorData;
-
-            for (const auto& sensor : stationData) {
-                if (sensor["id"] == sensorID && sensor.contains("values")) {
-                    sensorData.push_back(sensor);
-                }
+        for (const auto& sensor : stationData) {
+            if (sensor["id"] == sensorID && sensor.contains("values")) {
+                fullSensorData.push_back(sensor);
             }
-            //why does it display empty graph after dowloading data
-            // Create the GraphPanel to display the graph
-            // In the ShowSensorData function, create a larger dialog and set explicit sizes for the graph panel
-            wxDialog* detailsDialog = new wxDialog(this, wxID_ANY, "Sensor Data Graph", wxDefaultPosition, wxSize(800, 600));
-            wxBoxSizer* vbox = new wxBoxSizer(wxVERTICAL);
-
-            GraphPanel* graphPanel = new GraphPanel(detailsDialog, sensorData);
-            graphPanel->SetMinSize(wxSize(1000, 750));  // Set larger graph size
-            graphPanel->SetSize(wxSize(1000, 750));
-            vbox->Add(graphPanel, 1, wxEXPAND | wxALL, 10);
-
-            wxButton* closeButton = new wxButton(detailsDialog, wxID_OK, "Close");
-            vbox->Add(closeButton, 0, wxALIGN_CENTER | wxALL, 10);
-
-            detailsDialog->SetSizerAndFit(vbox);
-            detailsDialog->Layout();
-
-            detailsDialog->ShowModal();
-            detailsDialog->Destroy();
-
         }
+    
+
+        // Create a dialog that contains date controls and the graph.
+        wxDialog* detailsDialog = new wxDialog(this, wxID_ANY, "Sensor Data Graph", wxDefaultPosition, wxSize(900, 700));
+        wxBoxSizer* mainSizer = new wxBoxSizer(wxVERTICAL);
+    
+        // --- Date range selection controls ---
+        wxPanel* controlPanel = new wxPanel(detailsDialog);
+        wxBoxSizer* controlSizer = new wxBoxSizer(wxHORIZONTAL);
+    
+        wxStaticText* startLabel = new wxStaticText(controlPanel, wxID_ANY, "Start Date:");
+        wxDatePickerCtrl* startDatePicker = new wxDatePickerCtrl(controlPanel, wxID_ANY);
+        wxStaticText* endLabel = new wxStaticText(controlPanel, wxID_ANY, "End Date:");
+        wxDatePickerCtrl* endDatePicker = new wxDatePickerCtrl(controlPanel, wxID_ANY);
+        wxButton* applyButton = new wxButton(controlPanel, wxID_ANY, "Apply Date Range");
+    
+        controlSizer->Add(startLabel, 0, wxALL | wxALIGN_CENTER_VERTICAL, 5);
+        controlSizer->Add(startDatePicker, 0, wxALL, 5);
+        controlSizer->Add(endLabel, 0, wxALL | wxALIGN_CENTER_VERTICAL, 5);
+        controlSizer->Add(endDatePicker, 0, wxALL, 5);
+        controlSizer->Add(applyButton, 0, wxALL, 5);
+        controlPanel->SetSizer(controlSizer);
+        mainSizer->Add(controlPanel, 0, wxEXPAND | wxALL, 10);
+    
+        // --- Graph panel ---
+        GraphPanel* graphPanel = new GraphPanel(detailsDialog, fullSensorData);
+        graphPanel->SetMinSize(wxSize(1000, 550));
+        graphPanel->SetSize(wxSize(1000, 550));
+        mainSizer->Add(graphPanel, 1, wxEXPAND | wxALL, 10);
+    
+        // --- Close button ---
+        wxButton* closeButton = new wxButton(detailsDialog, wxID_OK, "Close");
+        mainSizer->Add(closeButton, 0, wxALIGN_CENTER | wxALL, 10);
+    
+        detailsDialog->SetSizerAndFit(mainSizer);
+        detailsDialog->Layout();
+    
+        // --- Bind the apply button ---
+        applyButton->Bind(wxEVT_BUTTON, [=, &fullSensorData, &graphPanel, &mainSizer, &detailsDialog](wxCommandEvent&) mutable  {
+            wxDateTime start = startDatePicker->GetValue();
+            wxDateTime end = endDatePicker->GetValue();
+            // Filter the data based on the chosen date range.
+            std::vector<nlohmann::json> filteredData = FilterSensorDataByDateRange(fullSensorData, start, end);
+    
+            // Remove the old graph panel and create a new one with the filtered data.
+            mainSizer->Detach(graphPanel);
+            graphPanel->Destroy();
+            graphPanel = new GraphPanel(detailsDialog, filteredData);
+            graphPanel->SetMinSize(wxSize(1000, 550));
+            graphPanel->SetSize(wxSize(1000, 550));
+            // Insert the new panel back into the sizer (insert at index 1 to keep controls on top).
+            mainSizer->Insert(1, graphPanel, 1, wxEXPAND | wxALL, 10);
+            detailsDialog->Layout();
+        });
+    
+        detailsDialog->ShowModal();
+        detailsDialog->Destroy();
     }
-    else{
+    }else{
         fetchAndSaveSensorData(stationID, sensorID);
         wxMessageBox("Data downloaded. Please reopen to view graph."+ to_string(stationData.contains("value")), "Info", wxICON_INFORMATION);
     }
-}
+    }
+    
+    std::vector<nlohmann::json> FilterSensorDataByDateRange(
+        const std::vector<nlohmann::json>& sensorData,
+        const wxDateTime& startDate,
+        const wxDateTime& endDate)
+    {
+        std::vector<nlohmann::json> filteredData;
+        for (const auto& sensor : sensorData) {
+            nlohmann::json sensorCopy;
+            sensorCopy["id"] = sensor["id"];
+            sensorCopy["values"] = nlohmann::json::array();
+            for (const auto& dataEntry : sensor["values"]) {
+                // Skip if "value" is missing or null.
+                if (!dataEntry.contains("value") || dataEntry["value"].is_null())
+                    continue;
+                
+                std::string dateStd = dataEntry.value("date", "1970-01-01");
+                wxString dateStr = wxString::FromUTF8(dateStd.c_str());
+                wxDateTime dt;
+                dt.ParseFormat(dateStr, "%Y-%m-%d");
+                if (dt.IsValid() && dt >= startDate && dt <= endDate) {
+                    sensorCopy["values"].push_back(dataEntry);
+                }
+            }
+            // If any values passed the filter, add this sensor copy.
+            if (!sensorCopy["values"].empty())
+                filteredData.push_back(sensorCopy);
+        }
+        return filteredData;
+    }
     
     
     void ShowCityDetails(const nlohmann::json& city) {
@@ -618,7 +749,7 @@ private:
 class MyApp : public wxApp {
 public:
     virtual bool OnInit() {
-        wxSetlocale(LC_ALL, "pl_PL.UTF-8");
+        wxSetlocale(LC_ALL, "en-US.UTF-8");
         MyFrame* frame = new MyFrame();
         init(frame);
         frame->Show(true);
