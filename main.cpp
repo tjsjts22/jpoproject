@@ -300,7 +300,7 @@ void init(wxWindow* parent) {
 
     // Continue with the rest of the logic as before
     ifstream outFile("database.json");
-    if (response==wxYES) {
+    if (response== wxYES ||!outFile.is_open() || outFile.peek() == ifstream::traits_type::eof()) {
         outFile.close();
         file.open("findAllmine.json");
         file.clear();
