@@ -1,0 +1,1465 @@
+[
+    {
+        "cityName": "Czerniawa",
+        "gegrLat": 50.912475,
+        "geogrLon": 15.31219,
+        "id": 11,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Dzierżoniów",
+        "gegrLat": 50.732817,
+        "geogrLon": 16.64805,
+        "id": 16,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Kłodzko",
+        "gegrLat": 50.433493,
+        "geogrLon": 16.65366,
+        "id": 38,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Legnica",
+        "gegrLat": 51.204503,
+        "geogrLon": 16.180513,
+        "id": 52,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Wrocław",
+        "gegrLat": 51.115933,
+        "geogrLon": 17.141125,
+        "id": 114,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Wrocław",
+        "gegrLat": 51.129378,
+        "geogrLon": 17.02925,
+        "id": 117,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Wrocław",
+        "gegrLat": 51.086225,
+        "geogrLon": 17.012689,
+        "id": 129,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Inowrocław",
+        "gegrLat": 52.793122,
+        "geogrLon": 18.241044,
+        "id": 143,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Bydgoszcz",
+        "gegrLat": 53.121764,
+        "geogrLon": 17.987906,
+        "id": 156,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Bydgoszcz",
+        "gegrLat": 53.134083,
+        "geogrLon": 17.995708,
+        "id": 158,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Koniczynka",
+        "gegrLat": 53.080647,
+        "geogrLon": 18.684258,
+        "id": 190,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Toruń",
+        "gegrLat": 53.028647,
+        "geogrLon": 18.666103,
+        "id": 206,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Toruń",
+        "gegrLat": 53.017628,
+        "geogrLon": 18.612808,
+        "id": 208,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Zielonka",
+        "gegrLat": 53.662117,
+        "geogrLon": 17.934017,
+        "id": 232,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Lublin",
+        "gegrLat": 51.259431,
+        "geogrLon": 22.569133,
+        "id": 266,
+        "provinceName": "LUBELSKIE"
+    },
+    {
+        "cityName": "Gajew",
+        "gegrLat": 52.143258,
+        "geogrLon": 19.233217,
+        "id": 291,
+        "provinceName": "ŁÓDZKIE"
+    },
+    {
+        "cityName": "Łódź",
+        "gegrLat": 51.75805,
+        "geogrLon": 19.529786,
+        "id": 295,
+        "provinceName": "ŁÓDZKIE"
+    },
+    {
+        "cityName": "Łódź",
+        "gegrLat": 51.775378,
+        "geogrLon": 19.450992,
+        "id": 296,
+        "provinceName": "ŁÓDZKIE"
+    },
+    {
+        "cityName": "Pabianice",
+        "gegrLat": 51.667981,
+        "geogrLon": 19.368683,
+        "id": 314,
+        "provinceName": "ŁÓDZKIE"
+    },
+    {
+        "cityName": "Parzniewice",
+        "gegrLat": 51.291175,
+        "geogrLon": 19.517556,
+        "id": 319,
+        "provinceName": "ŁÓDZKIE"
+    },
+    {
+        "cityName": "Piotrków Trybunalski",
+        "gegrLat": 51.404406,
+        "geogrLon": 19.696956,
+        "id": 322,
+        "provinceName": "ŁÓDZKIE"
+    },
+    {
+        "cityName": "Gorzów Wielkopolski",
+        "gegrLat": 52.738214,
+        "geogrLon": 15.228667,
+        "id": 361,
+        "provinceName": "LUBUSKIE"
+    },
+    {
+        "cityName": "Sulęcin",
+        "gegrLat": 52.437722,
+        "geogrLon": 15.122444,
+        "id": 376,
+        "provinceName": "LUBUSKIE"
+    },
+    {
+        "cityName": "Wschowa",
+        "gegrLat": 51.799722,
+        "geogrLon": 16.3175,
+        "id": 379,
+        "provinceName": "LUBUSKIE"
+    },
+    {
+        "cityName": "Kraków",
+        "gegrLat": 50.057678,
+        "geogrLon": 19.926189,
+        "id": 400,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Kraków",
+        "gegrLat": 50.069308,
+        "geogrLon": 20.053492,
+        "id": 402,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Skawina",
+        "gegrLat": 49.971047,
+        "geogrLon": 19.830422,
+        "id": 437,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Szymbark",
+        "gegrLat": 49.633714,
+        "geogrLon": 21.116833,
+        "id": 443,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Tarnów",
+        "gegrLat": 50.020169,
+        "geogrLon": 21.004167,
+        "id": 444,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Trzebinia",
+        "gegrLat": 50.159406,
+        "geogrLon": 19.477464,
+        "id": 449,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Piastów",
+        "gegrLat": 52.191728,
+        "geogrLon": 20.837489,
+        "id": 488,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Płock",
+        "gegrLat": 52.550938,
+        "geogrLon": 19.709791,
+        "id": 501,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Radom",
+        "gegrLat": 51.399084,
+        "geogrLon": 21.147474,
+        "id": 515,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Siedlce",
+        "gegrLat": 52.172145,
+        "geogrLon": 22.282001,
+        "id": 517,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Warszawa",
+        "gegrLat": 52.160772,
+        "geogrLon": 21.033819,
+        "id": 550,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Warszawa",
+        "gegrLat": 52.290864,
+        "geogrLon": 21.042458,
+        "id": 552,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Kędzierzyn-Koźle",
+        "gegrLat": 50.349608,
+        "geogrLon": 18.236575,
+        "id": 568,
+        "provinceName": "OPOLSKIE"
+    },
+    {
+        "cityName": "Słupsk",
+        "gegrLat": 54.463611,
+        "geogrLon": 17.046722,
+        "id": 725,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Gdańsk",
+        "gegrLat": 54.353196,
+        "geogrLon": 18.635267,
+        "id": 729,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Gdańsk",
+        "gegrLat": 54.400788,
+        "geogrLon": 18.657332,
+        "id": 731,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Gdańsk",
+        "gegrLat": 54.380139,
+        "geogrLon": 18.619766,
+        "id": 736,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Kościerzyna",
+        "gegrLat": 54.120694,
+        "geogrLon": 17.975861,
+        "id": 740,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Liniewko Kościerskie",
+        "gegrLat": 54.104111,
+        "geogrLon": 18.182972,
+        "id": 743,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Częstochowa",
+        "gegrLat": 50.817217,
+        "geogrLon": 19.118997,
+        "id": 798,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Częstochowa",
+        "gegrLat": 50.836389,
+        "geogrLon": 19.130111,
+        "id": 800,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Dąbrowa Górnicza",
+        "gegrLat": 50.329111,
+        "geogrLon": 19.231222,
+        "id": 805,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Rybnik",
+        "gegrLat": 50.111181,
+        "geogrLon": 18.516139,
+        "id": 834,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Sosnowiec",
+        "gegrLat": 50.285956,
+        "geogrLon": 19.184399,
+        "id": 837,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Ustroń",
+        "gegrLat": 49.719731,
+        "geogrLon": 18.826722,
+        "id": 842,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Wodzisław Śląski",
+        "gegrLat": 50.007629,
+        "geogrLon": 18.455548,
+        "id": 845,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Złoty Potok",
+        "gegrLat": 50.710889,
+        "geogrLon": 19.458797,
+        "id": 853,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Elbląg",
+        "gegrLat": 54.167847,
+        "geogrLon": 19.410942,
+        "id": 861,
+        "provinceName": "WARMIŃSKO-MAZURSKIE"
+    },
+    {
+        "cityName": "Gołdap",
+        "gegrLat": 54.305908,
+        "geogrLon": 22.307681,
+        "id": 870,
+        "provinceName": "WARMIŃSKO-MAZURSKIE"
+    },
+    {
+        "cityName": "Olsztyn",
+        "gegrLat": 53.789233,
+        "geogrLon": 20.486075,
+        "id": 877,
+        "provinceName": "WARMIŃSKO-MAZURSKIE"
+    },
+    {
+        "cityName": "Konin",
+        "gegrLat": 52.22565,
+        "geogrLon": 18.268927,
+        "id": 902,
+        "provinceName": "WIELKOPOLSKIE"
+    },
+    {
+        "cityName": "Poznań",
+        "gegrLat": 52.420319,
+        "geogrLon": 16.877289,
+        "id": 944,
+        "provinceName": "WIELKOPOLSKIE"
+    },
+    {
+        "cityName": "Szczecin",
+        "gegrLat": 53.380975,
+        "geogrLon": 14.663347,
+        "id": 986,
+        "provinceName": "ZACHODNIOPOMORSKIE"
+    },
+    {
+        "cityName": "Szczecin",
+        "gegrLat": 53.432169,
+        "geogrLon": 14.5539,
+        "id": 987,
+        "provinceName": "ZACHODNIOPOMORSKIE"
+    },
+    {
+        "cityName": "Żary",
+        "gegrLat": 51.642656,
+        "geogrLon": 15.127808,
+        "id": 382,
+        "provinceName": "LUBUSKIE"
+    },
+    {
+        "cityName": "Jelenia Góra",
+        "gegrLat": 50.913433,
+        "geogrLon": 15.765608,
+        "id": 9153,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Zdzieszowice",
+        "gegrLat": 50.423533,
+        "geogrLon": 18.120739,
+        "id": 600,
+        "provinceName": "OPOLSKIE"
+    },
+    {
+        "cityName": "Żyrardów",
+        "gegrLat": 52.053811,
+        "geogrLon": 20.429892,
+        "id": 562,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Kalisz",
+        "gegrLat": 51.74795,
+        "geogrLon": 18.049063,
+        "id": 952,
+        "provinceName": "WIELKOPOLSKIE"
+    },
+    {
+        "cityName": "Biała Podlaska",
+        "gegrLat": 52.029194,
+        "geogrLon": 23.149389,
+        "id": 236,
+        "provinceName": "LUBELSKIE"
+    },
+    {
+        "cityName": "Włocławek",
+        "gegrLat": 52.637394,
+        "geogrLon": 19.044486,
+        "id": 9791,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Ostróda",
+        "gegrLat": 53.694587,
+        "geogrLon": 19.969041,
+        "id": 10030,
+        "provinceName": "WARMIŃSKO-MAZURSKIE"
+    },
+    {
+        "cityName": "Kaszów",
+        "gegrLat": 50.025028,
+        "geogrLon": 19.726833,
+        "id": 10119,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Borówiec",
+        "gegrLat": 52.27672,
+        "geogrLon": 17.074187,
+        "id": 950,
+        "provinceName": "WIELKOPOLSKIE"
+    },
+    {
+        "cityName": "Kraków",
+        "gegrLat": 50.081197,
+        "geogrLon": 19.895358,
+        "id": 10123,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Mielec",
+        "gegrLat": 50.299128,
+        "geogrLon": 21.440942,
+        "id": 10438,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Kraków",
+        "gegrLat": 50.100569,
+        "geogrLon": 20.122561,
+        "id": 10447,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Małogoszcz",
+        "gegrLat": 50.80961,
+        "geogrLon": 20.266032,
+        "id": 10794,
+        "provinceName": "ŚWIĘTOKRZYSKIE"
+    },
+    {
+        "cityName": "Koziegłowy",
+        "gegrLat": 52.449295,
+        "geogrLon": 16.999634,
+        "id": 10834,
+        "provinceName": "WIELKOPOLSKIE"
+    },
+    {
+        "cityName": "Włocławek",
+        "gegrLat": 52.658467,
+        "geogrLon": 19.059314,
+        "id": 225,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Olesno",
+        "gegrLat": 50.876983,
+        "geogrLon": 18.416878,
+        "id": 584,
+        "provinceName": "OPOLSKIE"
+    },
+    {
+        "cityName": "Białystok",
+        "gegrLat": 53.144122,
+        "geogrLon": 23.216322,
+        "id": 11174,
+        "provinceName": "PODLASKIE"
+    },
+    {
+        "cityName": "Kielce",
+        "gegrLat": 50.878998,
+        "geogrLon": 20.633692,
+        "id": 11195,
+        "provinceName": "ŚWIĘTOKRZYSKIE"
+    },
+    {
+        "cityName": "Biała",
+        "gegrLat": 52.602534,
+        "geogrLon": 19.6451,
+        "id": 11358,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Warszawa",
+        "gegrLat": 52.207742,
+        "geogrLon": 20.906073,
+        "id": 10955,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Opole",
+        "gegrLat": 50.676856,
+        "geogrLon": 17.950278,
+        "id": 590,
+        "provinceName": "OPOLSKIE"
+    },
+    {
+        "cityName": "Koszalin",
+        "gegrLat": 54.194114,
+        "geogrLon": 16.211672,
+        "id": 11336,
+        "provinceName": "ZACHODNIOPOMORSKIE"
+    },
+    {
+        "cityName": "Koszalin",
+        "gegrLat": 54.193986,
+        "geogrLon": 16.172544,
+        "id": 966,
+        "provinceName": "ZACHODNIOPOMORSKIE"
+    },
+    {
+        "cityName": "Łask",
+        "gegrLat": 51.589208,
+        "geogrLon": 19.131433,
+        "id": 11554,
+        "provinceName": "ŁÓDZKIE"
+    },
+    {
+        "cityName": "Gołuchów",
+        "gegrLat": 50.621482,
+        "geogrLon": 20.614057,
+        "id": 11754,
+        "provinceName": "ŚWIĘTOKRZYSKIE"
+    },
+    {
+        "cityName": "Racibórz",
+        "gegrLat": 50.091142,
+        "geogrLon": 18.216261,
+        "id": 11794,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Oświęcim",
+        "gegrLat": 50.033083,
+        "geogrLon": 19.245275,
+        "id": 10814,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Białystok",
+        "gegrLat": 53.135286,
+        "geogrLon": 23.161325,
+        "id": 11814,
+        "provinceName": "PODLASKIE"
+    },
+    {
+        "cityName": "Augustów",
+        "gegrLat": 53.85255,
+        "geogrLon": 22.984686,
+        "id": 11916,
+        "provinceName": "PODLASKIE"
+    },
+    {
+        "cityName": "Nakło nad Notecią",
+        "gegrLat": 53.136681,
+        "geogrLon": 17.591539,
+        "id": 9798,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Opole",
+        "gegrLat": 50.666736,
+        "geogrLon": 17.899137,
+        "id": 10374,
+        "provinceName": "OPOLSKIE"
+    },
+    {
+        "cityName": "Kielce",
+        "gegrLat": 50.886014,
+        "geogrLon": 20.642858,
+        "id": 16196,
+        "provinceName": "ŚWIĘTOKRZYSKIE"
+    },
+    {
+        "cityName": "Gdańsk",
+        "gegrLat": 54.380682,
+        "geogrLon": 18.601559,
+        "id": 16180,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Sopot",
+        "gegrLat": 54.43451,
+        "geogrLon": 18.57884,
+        "id": 16242,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Głubczyce",
+        "gegrLat": 50.200778,
+        "geogrLon": 17.83051,
+        "id": 10018,
+        "provinceName": "OPOLSKIE"
+    },
+    {
+        "cityName": "Brzeg",
+        "gegrLat": 50.849509,
+        "geogrLon": 17.462579,
+        "id": 16413,
+        "provinceName": "OPOLSKIE"
+    },
+    {
+        "cityName": "Ełk",
+        "gegrLat": 53.828389,
+        "geogrLon": 22.348338,
+        "id": 10005,
+        "provinceName": "WARMIŃSKO-MAZURSKIE"
+    },
+    {
+        "cityName": "Kraków",
+        "gegrLat": 50.024605,
+        "geogrLon": 19.97846,
+        "id": 16896,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Katowice",
+        "gegrLat": 50.258483,
+        "geogrLon": 19.036217,
+        "id": 17318,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Zabrze",
+        "gegrLat": 50.317072,
+        "geogrLon": 18.771258,
+        "id": 17880,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Kraków",
+        "gegrLat": 50.034702,
+        "geogrLon": 20.044386,
+        "id": 20367,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Oława",
+        "gegrLat": 50.942073,
+        "geogrLon": 17.291333,
+        "id": 70,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Osieczów",
+        "gegrLat": 51.31763,
+        "geogrLon": 15.431719,
+        "id": 74,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Wałbrzych",
+        "gegrLat": 50.768729,
+        "geogrLon": 16.269677,
+        "id": 109,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Toruń",
+        "gegrLat": 53.012475,
+        "geogrLon": 18.605681,
+        "id": 145,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Zamość",
+        "gegrLat": 50.716628,
+        "geogrLon": 23.290247,
+        "id": 285,
+        "provinceName": "LUBELSKIE"
+    },
+    {
+        "cityName": "Smolary Bytnickie",
+        "gegrLat": 52.172222,
+        "geogrLon": 15.206667,
+        "id": 374,
+        "provinceName": "LUBUSKIE"
+    },
+    {
+        "cityName": "Zielona Góra",
+        "gegrLat": 51.939783,
+        "geogrLon": 15.518861,
+        "id": 387,
+        "provinceName": "LUBUSKIE"
+    },
+    {
+        "cityName": "Kraków",
+        "gegrLat": 50.010575,
+        "geogrLon": 19.949189,
+        "id": 401,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Nowy Sącz",
+        "gegrLat": 49.619281,
+        "geogrLon": 20.714403,
+        "id": 426,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Zakopane",
+        "gegrLat": 49.293564,
+        "geogrLon": 19.960083,
+        "id": 459,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Belsk Duży",
+        "gegrLat": 51.835242,
+        "geogrLon": 20.791912,
+        "id": 460,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Legionowo",
+        "gegrLat": 52.407578,
+        "geogrLon": 20.955928,
+        "id": 471,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Płock",
+        "gegrLat": 52.556279,
+        "geogrLon": 19.687672,
+        "id": 497,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Warszawa",
+        "gegrLat": 52.219298,
+        "geogrLon": 21.004724,
+        "id": 530,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Jasło",
+        "gegrLat": 49.744886,
+        "geogrLon": 21.454617,
+        "id": 638,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Nisko",
+        "gegrLat": 50.529892,
+        "geogrLon": 22.112467,
+        "id": 659,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Gdynia",
+        "gegrLat": 54.560836,
+        "geogrLon": 18.493331,
+        "id": 732,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Nowiny",
+        "gegrLat": 50.823108,
+        "geogrLon": 20.533506,
+        "id": 769,
+        "provinceName": "ŚWIĘTOKRZYSKIE"
+    },
+    {
+        "cityName": "Połaniec",
+        "gegrLat": 50.429014,
+        "geogrLon": 21.277367,
+        "id": 778,
+        "provinceName": "ŚWIĘTOKRZYSKIE"
+    },
+    {
+        "cityName": "Bielsko-Biała",
+        "gegrLat": 49.813464,
+        "geogrLon": 19.027318,
+        "id": 789,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Gliwice",
+        "gegrLat": 50.279481,
+        "geogrLon": 18.655736,
+        "id": 809,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Katowice",
+        "gegrLat": 50.264611,
+        "geogrLon": 18.975028,
+        "id": 814,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Tychy",
+        "gegrLat": 50.099903,
+        "geogrLon": 18.990236,
+        "id": 841,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Piła",
+        "gegrLat": 53.154408,
+        "geogrLon": 16.759572,
+        "id": 920,
+        "provinceName": "WIELKOPOLSKIE"
+    },
+    {
+        "cityName": "Szczecinek",
+        "gegrLat": 53.698902,
+        "geogrLon": 16.704556,
+        "id": 983,
+        "provinceName": "ZACHODNIOPOMORSKIE"
+    },
+    {
+        "cityName": "Szarów",
+        "gegrLat": 50.0075,
+        "geogrLon": 20.259167,
+        "id": 9179,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Guty Duże",
+        "gegrLat": 52.943172,
+        "geogrLon": 21.288167,
+        "id": 9913,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Łódź",
+        "gegrLat": 51.754613,
+        "geogrLon": 19.434925,
+        "id": 10058,
+        "provinceName": "ŁÓDZKIE"
+    },
+    {
+        "cityName": "Rzeszów",
+        "gegrLat": 50.040675,
+        "geogrLon": 22.004656,
+        "id": 10125,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Duszniki-Zdrój",
+        "gegrLat": 50.402561,
+        "geogrLon": 16.393311,
+        "id": 10093,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Tarnów",
+        "gegrLat": 50.018253,
+        "geogrLon": 20.992578,
+        "id": 10120,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Bielsko-Biała",
+        "gegrLat": 49.802075,
+        "geogrLon": 19.04861,
+        "id": 10158,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Radomsko",
+        "gegrLat": 51.067417,
+        "geogrLon": 19.448714,
+        "id": 331,
+        "provinceName": "ŁÓDZKIE"
+    },
+    {
+        "cityName": "Warszawa",
+        "gegrLat": 52.188474,
+        "geogrLon": 21.176233,
+        "id": 10956,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Borsukowizna",
+        "gegrLat": 53.215492,
+        "geogrLon": 23.642153,
+        "id": 612,
+        "provinceName": "PODLASKIE"
+    },
+    {
+        "cityName": "Suwałki",
+        "gegrLat": 54.115897,
+        "geogrLon": 22.938464,
+        "id": 11154,
+        "provinceName": "PODLASKIE"
+    },
+    {
+        "cityName": "Jarosław",
+        "gegrLat": 50.012083,
+        "geogrLon": 22.674772,
+        "id": 631,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Zawiercie",
+        "gegrLat": 50.493045,
+        "geogrLon": 19.439012,
+        "id": 11455,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Goczałkowice-Zdrój",
+        "gegrLat": 49.93785,
+        "geogrLon": 18.975594,
+        "id": 11457,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Bydgoszcz",
+        "gegrLat": 53.175214,
+        "geogrLon": 18.044164,
+        "id": 11576,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Trzebnica",
+        "gegrLat": 51.304817,
+        "geogrLon": 17.071367,
+        "id": 11934,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Świecie",
+        "gegrLat": 53.40758,
+        "geogrLon": 18.428751,
+        "id": 12038,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Pleszew",
+        "gegrLat": 51.884922,
+        "geogrLon": 17.791106,
+        "id": 9218,
+        "provinceName": "WIELKOPOLSKIE"
+    },
+    {
+        "cityName": "Lębork",
+        "gegrLat": 54.546167,
+        "geogrLon": 17.746194,
+        "id": 742,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Sulechów",
+        "gegrLat": 52.084833,
+        "geogrLon": 15.63325,
+        "id": 16238,
+        "provinceName": "LUBUSKIE"
+    },
+    {
+        "cityName": "Tarnobrzeg",
+        "gegrLat": 50.575742,
+        "geogrLon": 21.688367,
+        "id": 684,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Poznań",
+        "gegrLat": 52.390879,
+        "geogrLon": 16.998053,
+        "id": 16493,
+        "provinceName": "WIELKOPOLSKIE"
+    },
+    {
+        "cityName": "Białystok",
+        "gegrLat": 53.129601,
+        "geogrLon": 23.108054,
+        "id": 17658,
+        "provinceName": "PODLASKIE"
+    },
+    {
+        "cityName": "Kołobrzeg",
+        "gegrLat": 54.179381,
+        "geogrLon": 15.596347,
+        "id": 10934,
+        "provinceName": "ZACHODNIOPOMORSKIE"
+    },
+    {
+        "cityName": "Skarżysko-Kamienna",
+        "gegrLat": 51.115842,
+        "geogrLon": 20.891593,
+        "id": 17758,
+        "provinceName": "ŚWIĘTOKRZYSKIE"
+    },
+    {
+        "cityName": "Rzeszów",
+        "gegrLat": 49.998408,
+        "geogrLon": 21.992183,
+        "id": 20201,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Ciechanów",
+        "gegrLat": 52.885541,
+        "geogrLon": 20.602511,
+        "id": 20209,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Tomaszów Lubelski",
+        "gegrLat": 50.444128,
+        "geogrLon": 23.421553,
+        "id": 20277,
+        "provinceName": "LUBELSKIE"
+    },
+    {
+        "cityName": "Gdańsk",
+        "gegrLat": 54.328833,
+        "geogrLon": 18.568819,
+        "id": 20347,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Lubań",
+        "gegrLat": 51.120091,
+        "geogrLon": 15.298189,
+        "id": 20468,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Grudziądz",
+        "gegrLat": 53.49355,
+        "geogrLon": 18.762139,
+        "id": 142,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Ciechocinek",
+        "gegrLat": 52.888422,
+        "geogrLon": 18.780908,
+        "id": 164,
+        "provinceName": "KUJAWSKO-POMORSKIE"
+    },
+    {
+        "cityName": "Malbork",
+        "gegrLat": 54.031247,
+        "geogrLon": 19.032899,
+        "id": 741,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Krzyżówka",
+        "gegrLat": 52.501318,
+        "geogrLon": 17.773175,
+        "id": 946,
+        "provinceName": "WIELKOPOLSKIE"
+    },
+    {
+        "cityName": "Krempna",
+        "gegrLat": 49.511297,
+        "geogrLon": 21.498606,
+        "id": 9175,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Żywiec",
+        "gegrLat": 49.671602,
+        "geogrLon": 19.234446,
+        "id": 856,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Jastrzębie-Zdrój",
+        "gegrLat": 49.952544,
+        "geogrLon": 18.607953,
+        "id": 11855,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Konstancin-Jeziorna",
+        "gegrLat": 52.082277,
+        "geogrLon": 21.124598,
+        "id": 16271,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Mosina",
+        "gegrLat": 52.241497,
+        "geogrLon": 16.865125,
+        "id": 16495,
+        "provinceName": "WIELKOPOLSKIE"
+    },
+    {
+        "cityName": "Warszawa",
+        "gegrLat": 52.281304,
+        "geogrLon": 20.963383,
+        "id": 16533,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Krapkowice",
+        "gegrLat": 50.486194,
+        "geogrLon": 17.97477,
+        "id": 16913,
+        "provinceName": "OPOLSKIE"
+    },
+    {
+        "cityName": "Kolbuszowa",
+        "gegrLat": 50.245897,
+        "geogrLon": 21.769494,
+        "id": 20200,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Wilczopole",
+        "gegrLat": 51.163542,
+        "geogrLon": 22.598608,
+        "id": 282,
+        "provinceName": "LUBELSKIE"
+    },
+    {
+        "cityName": "Przemyśl",
+        "gegrLat": 49.784339,
+        "geogrLon": 22.756239,
+        "id": 665,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Rzeszów",
+        "gegrLat": 50.024242,
+        "geogrLon": 22.010575,
+        "id": 671,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Kraków",
+        "gegrLat": 50.098508,
+        "geogrLon": 20.018269,
+        "id": 10139,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Rymanów-Zdrój",
+        "gegrLat": 49.546539,
+        "geogrLon": 21.851006,
+        "id": 10414,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Florianka",
+        "gegrLat": 50.551894,
+        "geogrLon": 22.982861,
+        "id": 10874,
+        "provinceName": "LUBELSKIE"
+    },
+    {
+        "cityName": "Chojnów",
+        "gegrLat": 51.27428,
+        "geogrLon": 15.929804,
+        "id": 12056,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Łagów",
+        "gegrLat": 50.778479,
+        "geogrLon": 21.081224,
+        "id": 12138,
+        "provinceName": "ŚWIĘTOKRZYSKIE"
+    },
+    {
+        "cityName": "Świnoujście",
+        "gegrLat": 53.903814,
+        "geogrLon": 14.279628,
+        "id": 20160,
+        "provinceName": "ZACHODNIOPOMORSKIE"
+    },
+    {
+        "cityName": "Giżycko",
+        "gegrLat": 54.04321,
+        "geogrLon": 21.784858,
+        "id": 20447,
+        "provinceName": "WARMIŃSKO-MAZURSKIE"
+    },
+    {
+        "cityName": "Łomża",
+        "gegrLat": 53.181394,
+        "geogrLon": 22.054381,
+        "id": 618,
+        "provinceName": "PODLASKIE"
+    },
+    {
+        "cityName": "Łeba",
+        "gegrLat": 54.754139,
+        "geogrLon": 17.534528,
+        "id": 750,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Widuchowa",
+        "gegrLat": 53.122325,
+        "geogrLon": 14.382245,
+        "id": 961,
+        "provinceName": "ZACHODNIOPOMORSKIE"
+    },
+    {
+        "cityName": "Szczecin",
+        "gegrLat": 53.470889,
+        "geogrLon": 14.55625,
+        "id": 989,
+        "provinceName": "ZACHODNIOPOMORSKIE"
+    },
+    {
+        "cityName": "Sucha Beskidzka",
+        "gegrLat": 49.743131,
+        "geogrLon": 19.600339,
+        "id": 10124,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Białystok",
+        "gegrLat": 53.129306,
+        "geogrLon": 23.181744,
+        "id": 609,
+        "provinceName": "PODLASKIE"
+    },
+    {
+        "cityName": "Zielona Góra",
+        "gegrLat": 51.936249,
+        "geogrLon": 15.481077,
+        "id": 11294,
+        "provinceName": "LUBUSKIE"
+    },
+    {
+        "cityName": "Dębica",
+        "gegrLat": 50.054786,
+        "geogrLon": 21.416256,
+        "id": 9173,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Krosno",
+        "gegrLat": 49.690169,
+        "geogrLon": 21.7497,
+        "id": 646,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Niepołomice",
+        "gegrLat": 50.035117,
+        "geogrLon": 20.212689,
+        "id": 455,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Myślenice",
+        "gegrLat": 49.831237,
+        "geogrLon": 19.923591,
+        "id": 16753,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Wysokie Mazowieckie",
+        "gegrLat": 52.913878,
+        "geogrLon": 22.509275,
+        "id": 20140,
+        "provinceName": "PODLASKIE"
+    },
+    {
+        "cityName": "Granica",
+        "gegrLat": 52.285858,
+        "geogrLon": 20.454653,
+        "id": 466,
+        "provinceName": "MAZOWIECKIE"
+    },
+    {
+        "cityName": "Nowa Ruda",
+        "gegrLat": 50.581492,
+        "geogrLon": 16.498245,
+        "id": 11254,
+        "provinceName": "DOLNOŚLĄSKIE"
+    },
+    {
+        "cityName": "Chełm",
+        "gegrLat": 51.122147,
+        "geogrLon": 23.473075,
+        "id": 11360,
+        "provinceName": "LUBELSKIE"
+    },
+    {
+        "cityName": "Lubliniec",
+        "gegrLat": 50.675693,
+        "geogrLon": 18.682065,
+        "id": 11278,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Rabka-Zdrój",
+        "gegrLat": 49.608647,
+        "geogrLon": 19.966008,
+        "id": 10446,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Zabierzów",
+        "gegrLat": 50.116028,
+        "geogrLon": 19.800639,
+        "id": 11434,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Cieszyn",
+        "gegrLat": 49.755989,
+        "geogrLon": 18.634075,
+        "id": 16406,
+        "provinceName": "ŚLĄSKIE"
+    },
+    {
+        "cityName": "Sanok",
+        "gegrLat": 49.571731,
+        "geogrLon": 22.195892,
+        "id": 678,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Uście Gorlickie Wysowa",
+        "gegrLat": 49.440175,
+        "geogrLon": 21.178087,
+        "id": 17118,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Rzeszów",
+        "gegrLat": 50.060381,
+        "geogrLon": 21.980511,
+        "id": 17179,
+        "provinceName": "PODKARPACKIE"
+    },
+    {
+        "cityName": "Kraków",
+        "gegrLat": 49.991442,
+        "geogrLon": 19.936792,
+        "id": 11303,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Bytów",
+        "gegrLat": 54.1727,
+        "geogrLon": 17.49299,
+        "id": 16270,
+        "provinceName": "POMORSKIE"
+    },
+    {
+        "cityName": "Nowa Sól",
+        "gegrLat": 51.809103,
+        "geogrLon": 15.708042,
+        "id": 16613,
+        "provinceName": "LUBUSKIE"
+    },
+    {
+        "cityName": "Nowy Targ",
+        "gegrLat": 49.476675,
+        "geogrLon": 20.034878,
+        "id": 16894,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Krotoszyn",
+        "gegrLat": 51.697308,
+        "geogrLon": 17.441263,
+        "id": 20307,
+        "provinceName": "WIELKOPOLSKIE"
+    },
+    {
+        "cityName": "Kluczbork",
+        "gegrLat": 50.972181,
+        "geogrLon": 18.207575,
+        "id": 577,
+        "provinceName": "OPOLSKIE"
+    },
+    {
+        "cityName": "Nysa",
+        "gegrLat": 50.460992,
+        "geogrLon": 17.331499,
+        "id": 20387,
+        "provinceName": "OPOLSKIE"
+    },
+    {
+        "cityName": "Złockie",
+        "gegrLat": 49.374147,
+        "geogrLon": 20.879581,
+        "id": 10817,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Olkusz",
+        "gegrLat": 50.284,
+        "geogrLon": 19.564044,
+        "id": 11301,
+        "provinceName": "MAŁOPOLSKIE"
+    },
+    {
+        "cityName": "Kielce",
+        "gegrLat": 50.887606,
+        "geogrLon": 20.579965,
+        "id": 16497,
+        "provinceName": "ŚWIĘTOKRZYSKIE"
+    }
+]
