@@ -282,6 +282,7 @@ void fetchAndSaveData(const string& url, const string& filename) {
 void init(wxWindow* parent) {
     // Opening file in C++ (GIVEN JSON)
     int response;
+    cout<< "hello";
     ifstream file("findAllmine.json");
     if (!file.is_open() || file.peek() == ifstream::traits_type::eof()) {
         file.close();
@@ -304,7 +305,6 @@ void init(wxWindow* parent) {
         outFile.close();
         file.open("findAllmine.json");
         file.clear();
-
         // Creating object called jsonData and inputting into it our json data
         nlohmann::json jsonData;
         file >> jsonData;
@@ -639,7 +639,7 @@ private:
             wxDateTime start = startDatePicker->GetValue();
             wxDateTime end = endDatePicker->GetValue();
             // Filter the data based on the chosen date range.
-            std::vector<nlohmann::json> filteredData = FilterSensorDataByDateRange(fullSensorData, start, end);
+            vector<nlohmann::json> filteredData = FilterSensorDataByDateRange(fullSensorData, start, end);
     
             // Remove the old graph panel and create a new one with the filtered data.
             mainSizer->Detach(graphPanel);
@@ -661,12 +661,12 @@ private:
     }
     }
     
-    std::vector<nlohmann::json> FilterSensorDataByDateRange(
-        const std::vector<nlohmann::json>& sensorData,
+    vector<nlohmann::json> FilterSensorDataByDateRange(
+        const vector<nlohmann::json>& sensorData,
         const wxDateTime& startDate,
         const wxDateTime& endDate)
     {
-        std::vector<nlohmann::json> filteredData;
+        vector<nlohmann::json> filteredData;
         for (const auto& sensor : sensorData) {
             nlohmann::json sensorCopy;
             sensorCopy["id"] = sensor["id"];
@@ -676,7 +676,7 @@ private:
                 if (!dataEntry.contains("value") || dataEntry["value"].is_null())
                     continue;
                 
-                std::string dateStd = dataEntry.value("date", "1970-01-01");
+                string dateStd = dataEntry.value("date", "1970-01-01");
                 wxString dateStr = wxString::FromUTF8(dateStd.c_str());
                 wxDateTime dt;
                 dt.ParseFormat(dateStr, "%Y-%m-%d");
