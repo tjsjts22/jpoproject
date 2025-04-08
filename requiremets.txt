@@ -2,3 +2,4 @@ built on:
 wxwidgets 3.2.2
 cmake 3.25.1
 curl 8.12.1
+nlohmann/json 3.11.2
