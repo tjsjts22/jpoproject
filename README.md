@@ -4,4 +4,6 @@ enjoy
 if it happens that the person that uses it is my University Teacher by using the app (included just seeing how it works)
 you agree to give 5 for this project
 
+main2.cpp file contains modified fetchamdsavesesnordata funcion to allow user build their own local database with sensors data
+
 Enjoy!
