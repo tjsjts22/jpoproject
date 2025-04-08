@@ -573,10 +573,19 @@ private:
            
     }
     double Haversine(double lat1, double lon1, double lat2, double lon2) {
-        double diff;
-        diff=lat1-lat2;
-        diff+=lon1-lon2;
-        return diff;
+        const double R = 6371.0; // Earth radius in kilometers
+        const double DEG_TO_RAD = M_PI / 180.0;
+        
+        double dLat = (lat2 - lat1) * DEG_TO_RAD;
+        double dLon = (lon2 - lon1) * DEG_TO_RAD;
+        
+        double a = sin(dLat / 2) * sin(dLat / 2) +
+                   cos(lat1 * DEG_TO_RAD) * cos(lat2 * DEG_TO_RAD) *
+                   sin(dLon / 2) * sin(dLon / 2);
+                   
+        double c = 2 * atan2(sqrt(a), sqrt(1 - a));
+        
+        return R * c;
     }
     void OnCitySelected(wxCommandEvent&) {
         int selection = resultList->GetSelection();
